@@ -274,7 +274,8 @@ img{
 	border: 1px solid #EAF0ED;
 }
 .page td a{
-	display: block;
+    display: block;
+    color: #3F5D45;
 	width: 59px;
 	font-size: 20px;
 	line-height: 28px;
@@ -412,7 +413,9 @@ img{
     writing-mode: vertical-rl;
     font-size: 24px;
     letter-spacing: 6px;
-    font-weight: bold;
+    line-height: 1.5;
+    font-weight: bolder;
+    font-family: PMingLiU;
     text-indent: -10px;
     margin-top: 10px;
 }
