@@ -1,0 +1,446 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 940px;
+    padding-top: 30px;
+    margin: 0 auto;
+    font-family:Microsoft JhengHei;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.header h1 a{
+    display: block;
+    width: 210px;
+    height: 40px;
+    background-image:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg);
+    text-indent: 101%;
+	overflow: hidden;
+	word-spacing: nowrap;
+}
+.header .options{
+    display: flex;
+}
+.header .options li a{
+    color: #3F5D45;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 22px;
+	text-align: left;
+	font-weight: bold;
+    margin-left: 60px;
+}
+.header .options li .cart{ 
+    background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/shopping_cart.png?raw=true);
+    display:block;
+    width: 24px;
+	text-indent: 101%;
+    overflow: hidden;
+    word-spacing: nowrap;
+    margin-left: 79px;
+}
+.header .options li a:hover{
+    background-color: #EAF0ED;
+}
+.header .burgerMenu{
+    background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/dehaze-24px.png?raw=true);
+    display:block;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    text-indent: 101%;
+    overflow: hidden;
+    word-spacing: nowrap;
+    display: none;
+}
+@media(max-width:768px){
+    .container{
+        width: 100%;
+    }
+    .header{
+        justify-content: space-around;
+    }
+    .header h1 a{
+        width: 114px;
+        height: 18px;
+        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-sm-dark.svg);
+        background-repeat: no-repeat;
+    }
+    .header .options li a{
+        display: none; 
+    }
+    .header .burgerMenu{
+        display: inline;
+    }
+    .header .options li .cart{
+        margin-left: 0px;
+    }
+}
+/* banner */
+.banner{
+    margin-bottom: 60px;
+}
+@media(max-width:768px){
+    .banner{
+        margin-bottom: 0px;
+    }
+}
+/* menu */
+.menu{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} 
+.menu .category{
+    width: 32%;
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: bold;
+}
+.menu .category h2{
+    padding: 16px 0px;
+    background-color: #3F5D45;
+    color: #EAF0ED;
+    text-align: center;
+}
+.menu .category th{
+    border: 1px solid transparent;
+}
+.menu .category td{
+    border: 1px solid #EAF0ED;
+    text-align: center;
+    width: 32%;
+}
+.menu .category td a{
+    display: block;
+    text-decoration: none;
+    padding: 16px 0px;
+    color: #3F5D45;
+}
+.menu .category td a:hover{
+    background-color: #EAF0ED;
+}
+.menu .dessert{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 66%;
+}
+.menu .dessert li{
+    width: 48.5%;
+	margin-bottom: 20px;
+	position: relative;
+}
+.menu .dessert .name_money{
+	display: flex;
+	align-items: center;
+	color:#3F5D45;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+    border-left: 1px solid #EAF0ED;
+    border-right: 1px solid #EAF0ED;
+}
+.menu .dessert .name_money h2{
+    padding: 14px 33px;
+    border-right: 1px solid #EAF0ED;
+    font-weight: initial;
+}
+.menu .dessert .name_money p{
+    margin: 0 auto;
+}
+.menu .dessert .add_cart{
+    display: block;
+    background-color: #EAF0ED;
+    border: 1px solid #EAF0ED;
+    text-decoration: none;
+    font-size: 24px;
+    color: #3F5D45;
+    font-weight: bold;
+    text-align: center;
+    line-height: 33px;
+    padding: 16px 0px;
+}
+.menu .dessert .add_cart:hover{
+    background-color: #3F5D45;
+    color: #EAF0ED;
+}
+.menu .dessert .special{
+	position: absolute;
+	padding: 10px;
+	top: 0;
+	left: 20px;
+	font-size: 16px;
+	background-color: #3F5D45;
+	color: white;
+	line-height: 20px;
+	letter-spacing: 6px;
+	font-weight: bold;
+	writing-mode: vertical-rl;
+}
+.menu .dessert .like{
+	background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/favorite_border.png?raw=true);
+	display: block;
+	text-indent: 101%;
+    overflow: hidden;
+	word-spacing: nowrap;
+	position: absolute;
+	right: 22px;
+	top: 19px;
+	width: 20px;
+	height: 18.35px;
+}
+@media(max-width:768px){
+    .menu .category{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .menu .dessert{
+        width: 100%;
+        justify-content: center;
+    }
+    .menu .dessert li{
+        width: 85%;
+        margin-bottom: 30px;
+    }
+    .menu .dessert li img{
+        width: 100%;
+    }
+}
+/* page */
+.page{
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 60px;
+}
+.page td{
+	border: 1px solid #EAF0ED;
+}
+.page td a{
+	display: block;
+	width: 59px;
+	font-size: 20px;
+	line-height: 28px;
+	text-decoration: none;
+	padding: 16px 0px;
+	text-align: center;
+}
+.page .arrow_left{
+	text-indent: 101%;
+    overflow: hidden;
+	word-spacing: nowrap;
+	background-repeat: no-repeat;
+	background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_left.png?raw=true);
+	background-position: center;
+}
+.page .arrow_right{
+	text-indent: 101%;
+    overflow: hidden;
+	word-spacing: nowrap;
+	background-repeat: no-repeat;
+	background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_right.png?raw=true);
+	background-position: center;
+}
+.page td a:hover{
+	background-color: #3F5D45;
+	color: white;
+}
+.page .arrow_left:hover,.page .arrow_right:hover{
+	background-color: white;
+	border: 1px solid #3F5D45;
+}
+@media(max-width:768px){
+    .page{
+        justify-content: center;
+	    margin-bottom: 30px;
+    }
+}
+/* footer */
+.footer{
+    font-family:Microsoft JhengHei;
+}
+.dark_footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #3F5D45;
+    padding: 30px 6%;
+}
+.dark_footer .LogoandText{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.dark_footer .logo_light{
+    width: 40px;
+    margin-right: 20px;
+}
+.dark_footer p{
+    font-size: 24px;
+    line-height: 33px;
+    color: #EAF0ED;
+}
+.dark_footer .mail_part{
+    display: flex;
+    min-width: 380px;
+}
+.dark_footer .mail_part .mail_logo{
+    display: block;
+    padding: 16px 20px;
+    border: 1px solid transparent;
+    background-color: white;
+}
+.dark_footer .mail_part .mail{
+    border: 1px solid transparent;
+    width: 100%;
+}
+.dark_footer .mail_part button{
+    padding: 20px 24px;
+    background-color: #FFE180;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.dark_footer .mail_part button:hover{
+    background-color:gold;
+}
+
+.light_footer{
+    background-color: #EAF0ED;
+    padding: 30px 6%;
+    display: flex;
+    justify-content: space-between;
+}
+.information img{
+    display: block;
+    width: 171px;
+    margin-top: 10px;
+    margin-bottom: 115px;
+}
+.information p{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #3F5D45;
+}
+.information .icon{
+    display: flex;
+    margin-top: 30px;
+}
+.information .icon .line{
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/ic-line%40.svg);
+    text-indent: 101%;
+    overflow: hidden;
+    word-spacing: nowrap;
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+.information .icon .fb{
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/ic-facebook.svg);
+    text-indent: 101%;
+    overflow: hidden;
+    word-spacing: nowrap;
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+.light_footer .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #3F5D45;
+}
+.light_footer .text h2{
+    writing-mode: vertical-rl;
+    font-size: 24px;
+    letter-spacing: 6px;
+    font-weight: bold;
+    text-indent: -10px;
+    margin-top: 10px;
+}
+.light_footer .text p{
+    font-size: 16px;
+}
+@media(max-width:768px){
+    .dark_footer{
+        flex-direction: column;
+        justify-content: ;
+    }
+    .dark_footer .mail_part{
+        margin-top: 30px;
+        min-width: 315px;
+    }
+    .light_footer{
+        flex-direction: column;
+    }
+    .information img{
+        margin-bottom: 40px;
+    }
+    .information .icon{
+        margin-top: 37px;
+    }
+    .light_footer .text h2{
+        display: none;
+    }
+    .light_footer .text{
+        margin-top: 23px;
+    }
+}
